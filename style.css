@@ -1,0 +1,577 @@
+        @import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Kolker+Brush&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Roboto+Condensed:wght@700&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        
+         :root {
+            --text-color: rgb(241, 234, 234);
+            --main-color: rgb(138, 134, 134);
+            --bg-color: rgb(33, 222, 222);
+        }
+        
+        body {
+            background-color: white;
+        }
+        
+        header {
+            transition: 1.5s;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            transition: 1s;
+            background-color: var(--text-color);
+        }
+        
+        .title-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .title-logo i {
+            margin-right: 10px;
+        }
+        
+        header .menu {
+            display: flex;
+            column-gap: 2rem;
+        }
+        
+        .menu a {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .menu li {
+            position: relative;
+        }
+        
+        .menu a::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: var(--bg-color);
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            transition: 0.5s;
+        }
+        
+        .menu a:hover::after,
+        .menu .active::after {
+            transition: 1s;
+            width: 100%;
+        }
+        
+        .btn {
+            background-color: var(--bg-color);
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .btn:hover {
+            background-color: rgb(34, 84, 159);
+        }
+        /* home  */
+        
+        .container {
+            width: 100%;
+            min-height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .container img {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.7;
+        }
+        
+        .container .img-text {
+            margin-left: 100px;
+        }
+        
+        .img-text span {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        .img-text h1 {
+            font-size: 4rem;
+            font-weight: 1000;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .img-text .shop {
+            background-color: var(--main-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        .img-text .shop:hover {
+            background-color: rgb(91, 101, 149);
+        }
+        
+        .book .heading {
+            max-width: 970px;
+            text-align: center;
+            margin: 30px auto 30px auto;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 700;
+            /* margin: 2rem; */
+            border-bottom: 1px solid var(--bg-color);
+        }
+        
+        .book .book-container {
+            max-width: 960px;
+            margin: 0px auto 0px auto;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            gap: 1rem;
+        }
+        
+        .book-container .box {
+            background-color: var(--main-color);
+        }
+        
+        .book-container .box span {
+            font-weight: 550;
+            font-size: 1.2rem;
+        }
+        
+        .book-container .box .box-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 7px;
+        }
+        
+        .box-image img:hover {
+            transition: 0.5s;
+            transform: scale(1.06);
+            cursor: pointer;
+            filter: brightness(1.2);
+            box-shadow: 2px 2px 2px rgb(74, 74, 74);
+            border-radius: 5px;
+        }
+        /* latest blog  */
+        
+        .latest-blog {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 40px;
+        }
+        
+        .latest-blog .blog {
+            background-color: var(--text-color);
+        }
+        
+        .latest-blog .blog .cover-text {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .latest-blog .blog .cover-text .date {
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+            width: 200px;
+            height: 50px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            background-color: var(--bg-color);
+        }
+        
+        .book .latest-blog {
+            gap: 1rem;
+        }
+        
+        .blog .blog-image img {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .blog .text-style {
+            padding: 20px;
+        }
+        
+        .blog .text-style h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .blog .text-style h4 {
+            color: var(--bg-color);
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .book .latest-blog .blog span {
+            line-height: 2rem;
+            text-align: justify;
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+        /* contact section  */
+        
+        .contact {
+            /* max-width: 980px;
+            margin: 0 auto; */
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            margin-top: 30px;
+            background-color: var(--bg-color);
+            color: white;
+            line-height: 2rem;
+        }
+        
+        .contact .letter {
+            width: 500px;
+            padding: 30px;
+        }
+        
+        .contact .letter h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .contact .letter span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .contact form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact .email {
+            padding: 20px;
+            width: 400px;
+            border-radius: 15px;
+        }
+        /* service  */
+        
+        .service {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            gap: 1rem;
+        }
+        
+        .service .blog .service-title .title-logo {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service .info {
+            display: flex;
+            flex-direction: column;
+            line-height: 3rem;
+        }
+        
+        .service .info i {
+            font-size: 2rem;
+        }
+        
+        .service ul li {
+            list-style-type: circle;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 2.5rem;
+        }
+        
+        .service .blog {
+            /* background-color: var(--text-color); */
+            padding: 20px;
+        }
+        
+        .info .info-child {
+            display: flex;
+        }
+        
+        .info .info-child i {
+            font-size: 2rem;
+        }
+        
+        .location {
+            width: 100%;
+        }
+        
+        .blog .share-logo {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            color: var(--bg-color);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        /* responsive  */
+        
+        @media (max-width:1020px) {
+            header .title-logo {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            header .menu {
+                column-gap: 1rem;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            header a .btn {
+                padding: 1px 1px;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            .service .blog .service-title .title-logo {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            .service .info {
+                line-height: 2rem;
+                font-size: 1rem;
+            }
+            .service .info i {
+                font-size: 1rem;
+            }
+            .service ul li {
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 2rem;
+            }
+        }
+        
+        @media (max-width:840px) {
+            header .menu {
+                display: none;
+            }
+            .container .img-text span {
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            .container .img-text h1 {
+                font-size: 3.2rem;
+                font-weight: 800;
+            }
+            .blog .blog-image img {
+                height: 200px;
+            }
+            .latest-blog .blog .cover-text .date {
+                bottom: -15px;
+                left: 20px;
+                width: 120px;
+                height: 30px;
+                font-weight: 200;
+            }
+            .latest-blog .blog .cover-text .date span {
+                font-size: 0.7rem;
+                font-weight: 100;
+            }
+            .blog .text-style h1 {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            .latest-blog .blog .text-style span {
+                font-size: 0.7rem;
+                font-weight: 300;
+            }
+            .contact .letter h2 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .contact .letter span {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            .contact .email {
+                padding: 10px;
+                width: 200px;
+            }
+            .contact form .btn {
+                padding: 10px;
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+        }
+        
+        @media (max-width:600px) {
+            .container .img-text span {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            .container .img-text h1 {
+                font-size: 3rem;
+                font-weight: 800;
+            }
+            .contact .letter span {
+                display: none;
+            }
+            .contact .letter h2 {
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 1.1rem;
+            }
+            .contact .email {
+                padding: 8px;
+                width: 120px;
+                border-radius: 12px;
+            }
+            .contact form .btn {
+                padding: 8px;
+                font-size: 0.7rem;
+                font-weight: 300;
+            }
+            .blog .blog-image img {
+                height: 150px;
+            }
+            .book-container .box h1 {
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+            .book-container .box span {
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width:500px) {
+            .home .container .img-text {
+                margin-left: 50px;
+            }
+            .book .heading {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .container .img-text span {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+            .container .img-text h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+            .blog .blog-image img {
+                height: 130px;
+            }
+            .latest-blog .blog .cover-text .date {
+                bottom: -10px;
+                left: 6px;
+                width: 95px;
+                height: 18px;
+                font-weight: 100;
+            }
+            .latest-blog .blog .cover-text .date span {
+                font-size: 0.5rem;
+                font-weight: 900;
+            }
+            .blog .text-style h1 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .blog .text-style h4 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .book .latest-blog .blog span {
+                line-height: 0.5rem;
+                font-size: 0.6rem;
+            }
+            .blog .share-logo {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+        
+        @media (max-width:376px) {
+            .container .img-text span {
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+            .container .img-text h1 {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            .container .img-text .shop {
+                font-size: 1rem;
+                padding: 7px 10px;
+                border-radius: 3px;
+                margin: 3px;
+            }
+            .latest-blog .blog .blog-image img {
+                height: 95px;
+            }
+            .latest-blog .blog .cover-text .date {
+                bottom: -9px;
+                left: 6px;
+                width: 70px;
+                height: 15px;
+                font-weight: 900;
+            }
+            .blog .text-style h1 {
+                font-size: 0.5rem;
+                font-weight: 200;
+            }
+            .blog .text-style h4 {
+                font-size: 0.5rem;
+                font-weight: 200;
+            }
+            .book .latest-blog .blog span {
+                line-height: 0.2rem;
+                font-size: 0.5rem;
+            }
+            .contact .letter h2 {
+                font-size: 0.7rem;
+                font-weight: 200;
+                line-height: 1rem;
+            }
+            .contact .email {
+                padding: 5px;
+                width: 100px;
+                border-radius: 10px;
+            }
+            .contact form .btn {
+                padding: 5px;
+                font-size: 0.5rem;
+                font-weight: 200;
+            }
+            .blog .blog-image img {
+                height: 150px;
+            }
+        }
